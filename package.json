@@ -1,0 +1,27 @@
+{
+  "name": "fa-svg-icon",
+  "version": "0.0.0",
+  "description": "free Font-Awesome SVG icons",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fibo/fa-svg-icon.git"
+  },
+  "keywords": [
+    "fontawesome",
+    "svg",
+    "icon",
+    "icons"
+  ],
+  "author": "Gianluca Casati (http://g14n.info)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fibo/fa-svg-icon/issues"
+  },
+  "homepage": "https://github.com/fibo/fa-svg-icon#readme"
+}
