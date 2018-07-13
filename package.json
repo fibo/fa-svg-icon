@@ -1,6 +1,6 @@
 {
   "name": "fa-svg-icon",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "free Font-Awesome SVG icons",
   "main": "index.js",
   "dependencies": {},
