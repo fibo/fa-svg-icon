@@ -28,7 +28,9 @@ const solidIcon = require('fa-svg-icon/solid')
 console.log(solidIcon.addressBook)
 ```
 
-<!-- TODO
+Note that if for example you do not use *brands* and *regular* icons, using
+the syntax above will save up to 450kb in your build.
+It is possible to refine granularity even more.
 
 Import only *address book solid* icon.
 
@@ -38,7 +40,8 @@ const addressBookIcon = require('fa-svg-icon/solid/address-book')
 console.log(solidIcon.addressBookIcon)
 ```
 
--->
+This last approach can take a little time more during development, but if
+you are using few icons it can be worth to import only what you need.
 
 ## Development
 
