@@ -33,9 +33,9 @@ function generate (bundle, faIcons) {
     const faIcon = faIcons[name]
 
     const viewBox = `0 0 ${faIcon[0]} ${faIcon[1]}`
-    const path = faIcon[4]
+    const pathD = faIcon[4]
 
-    const iconData = `{viewBox:'${viewBox}',path:'${path}'}`
+    const iconData = `['${viewBox}','${pathD}']`
 
     // Write single icon source file.
     write(`${bundle}/${name}.js`, `module.exports=${iconData}`)

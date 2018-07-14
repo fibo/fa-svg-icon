@@ -12,17 +12,28 @@ npm install fa-svg-icon
 
 ## Usage
 
-Import all icons
+Import all icons.
 
 ```javascript
 const icon = require('fa-svg-icon')
 
 console.log(icon.solid.addressBook)
-// {
-//   viewBox: '0 0 448 512',
-//   path: 'M436 160c6.6 0 12-5.4 ... ... ... 0 67.2 25.8 67.2 57.6v19.2z'
-// }
+// [
+//   '0 0 448 512',
+//   'M436 160c6.6 0 12-5.4 ... ... ... 0 67.2 25.8 67.2 57.6v19.2z'
+// ]
 ```
+
+Icon data is an array which elements are:
+
+1. The SVG `viewBox`.
+2. The attribute **d** of `path` tag.
+
+Icons are organized into three packs:
+
+* brands
+* regular
+* solid
 
 Import only *solid* icons.
 
