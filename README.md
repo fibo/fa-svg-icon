@@ -58,8 +58,12 @@ Icons come from [Font-Awesome/svg-with-js/js/](https://github.com/FortAwesome/Fo
 Files *fa-brands.js*, *fa-regular.js*, *fa-solid.js* contain original
 Font Awesome code and are consumed by `npm run build` script to create
 source files.
+
 Icon names are camelized: for example Font Awesome name `address-book` is
 converted into `addressBook` for JavaScript compatibility.
+
+Identifiers that starts with a number, like *500px* are enclosed in quotes to
+avoid parsing error: *Identifier directly after number*.
 
 ## License
 

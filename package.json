@@ -5,12 +5,14 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "browserify": "^16.2.2",
     "write-file-utf8": "^1.2.1"
   },
   "scripts": {
+    "browserify": "browserify -e index.js -o browserify_test_output.js",
     "build": "node build",
     "postversion": "git push origin v${npm_package_version}; npm publish",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run browserify"
   },
   "repository": {
     "type": "git",

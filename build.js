@@ -40,12 +40,19 @@ function generate (bundle, faIcons) {
     // Write single icon source file.
     write(`${bundle}/${name}.js`, `module.exports=${iconData}`)
 
+    const jsName = camelize(name)
+
+    const startsWithNumber = jsName.match(/^\d/)
+
+    // Avoid error: Identifier directly after number
+    const identifier = startsWithNumber ? `'${jsName}'` : jsName
+
     // Add icon to bundle.
-    iconsData.push(`${camelize(name)}:${iconData}`)
+    iconsData.push(`\n${identifier}:${iconData}`)
   }
 
   // Write icons bundle source file.
-  write(`${bundle}.js`, `module.exports={${iconsData.join(',')}}`)
+  write(`${bundle}.js`, `module.exports={${iconsData.join(',')}\n}`)
 }
 
 generate('brands', brands)
