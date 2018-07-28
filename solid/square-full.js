@@ -1,1 +1,1 @@
-module.exports=['0 0 512 512','M512 512H0V0h512v512z']
+module.exports={viewBox:'0 0 512 512',d:'M512 512H0V0h512v512z'}

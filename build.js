@@ -27,7 +27,7 @@ function camelize (name) {
  */
 
 function generate (bundle, faIcons) {
-  const iconsData = []
+  const iconsList = []
 
   for (name in faIcons) {
     const faIcon = faIcons[name]
@@ -35,10 +35,10 @@ function generate (bundle, faIcons) {
     const viewBox = `0 0 ${faIcon[0]} ${faIcon[1]}`
     const pathD = faIcon[4]
 
-    const iconData = `['${viewBox}','${pathD}']`
+    const iconObj = `{viewBox:'${viewBox}',d:'${pathD}'}`
 
     // Write single icon source file.
-    write(`${bundle}/${name}.js`, `module.exports=${iconData}`)
+    write(`${bundle}/${name}.js`, `module.exports=${iconObj}`)
 
     const jsName = camelize(name)
 
@@ -48,11 +48,11 @@ function generate (bundle, faIcons) {
     const identifier = startsWithNumber ? `'${jsName}'` : jsName
 
     // Add icon to bundle.
-    iconsData.push(`\n${identifier}:${iconData}`)
+    iconsList.push(`\n${identifier}:${iconObj}`)
   }
 
   // Write icons bundle source file.
-  write(`${bundle}.js`, `module.exports={${iconsData.join(',')}\n}`)
+  write(`${bundle}.js`, `module.exports={${iconsList.join(',')}\n}`)
 }
 
 generate('brands', brands)
